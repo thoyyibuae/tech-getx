@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_cli_tech/app/modules/getstorage/controllers/getstorage_controller.dart';
 
-import '../controllers/storage_display_controller.dart';
-
-class StorageDisplayView extends GetView<StorageDisplayController> {
+class StorageView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

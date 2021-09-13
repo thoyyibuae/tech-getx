@@ -1,11 +1,11 @@
 import 'package:get/get.dart';
 
 import 'package:get_cli_tech/app/modules/StorageDisplay/bindings/storage_display_binding.dart';
-import 'package:get_cli_tech/app/modules/StorageDisplay/views/storage_display_view.dart';
 import 'package:get_cli_tech/app/modules/getstorage/bindings/getstorage_binding.dart';
 import 'package:get_cli_tech/app/modules/getstorage/views/getstorage_view.dart';
 import 'package:get_cli_tech/app/modules/home/bindings/home_binding.dart';
 import 'package:get_cli_tech/app/modules/home/views/home_view.dart';
+import 'package:get_cli_tech/app/modules/storage_display/views/storage_view.dart';
 
 part 'app_routes.dart';
 
@@ -27,7 +27,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.STORAGE_DISPLAY,
-      page: () => StorageDisplayView(),
+      page: () => StorageView(),
       binding: StorageDisplayBinding(),
     ),
   ];

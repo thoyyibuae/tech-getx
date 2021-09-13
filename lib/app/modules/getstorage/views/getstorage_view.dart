@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_cli_tech/app/components/button.dart';
 import 'package:get_cli_tech/app/components/validate_button.dart';
-import 'package:get_cli_tech/app/modules/StorageDisplay/views/storage_display_view.dart';
+import 'package:get_cli_tech/app/modules/storage_display/views/storage_view.dart';
 
 import '../controllers/getstorage_controller.dart';
 
@@ -54,8 +54,7 @@ class GetstorageView extends GetView<GetstorageController> {
                       lineButton(
                           text: "view",
                           onTap: () {
-                            Get.to(StorageDisplayView(),
-                                arguments: "${_.email.text}");
+                            Get.to(StorageView(), arguments: "${_.email.text}");
                           })
                     ],
                   );
