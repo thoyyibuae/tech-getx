@@ -1,9 +1,7 @@
 import 'package:get/get.dart';
 
 import 'package:get_cli_tech/app/modules/get_storage/bindings/get_storage_binding.dart';
-import 'package:get_cli_tech/app/modules/get_storage/bindings/getstorage_binding.dart';
 import 'package:get_cli_tech/app/modules/get_storage/views/get_storage_view.dart';
-import 'package:get_cli_tech/app/modules/get_storage/views/getstorage_view.dart';
 import 'package:get_cli_tech/app/modules/get_storage/views/storage_view.dart';
 import 'package:get_cli_tech/app/modules/home/bindings/home_binding.dart';
 import 'package:get_cli_tech/app/modules/home/views/home_view.dart';
