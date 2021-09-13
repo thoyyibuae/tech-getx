@@ -22,8 +22,8 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.GETSTORAGE,
-      page: () => GetstorageView(),
-      binding: GetstorageBinding(),
+      page: () => GetStorageView(),
+      binding: GetStorageBinding(),
     ),
     GetPage(
       name: _Paths.STORAGE_DISPLAY,

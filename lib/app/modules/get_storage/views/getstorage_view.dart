@@ -7,7 +7,7 @@ import 'package:get_cli_tech/app/modules/storage_display/views/storage_view.dart
 
 import '../controllers/getstorage_controller.dart';
 
-class GetstorageView extends GetView<GetstorageController> {
+class GetStorageView extends GetView<GetStorageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +19,8 @@ class GetstorageView extends GetView<GetstorageController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GetBuilder<GetstorageController>(
-                init: GetstorageController(),
+            GetBuilder<GetStorageController>(
+                init: GetStorageController(),
                 builder: (_) {
                   return Column(
                     children: [

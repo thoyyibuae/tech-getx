@@ -111,7 +111,7 @@ class HomeView extends GetView<HomeController> {
           lineButton(
               text: "Get Storage Example ",
               onTap: () {
-                Get.to(() => GetstorageView());
+                Get.to(() => GetStorageView());
               }),
           lineButton(
               text: "Bottom Sheet",

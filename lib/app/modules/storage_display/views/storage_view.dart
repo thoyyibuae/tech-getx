@@ -19,8 +19,8 @@ class StorageView extends GetView {
               'Storage by Arguments :${Get.arguments.toString()}',
               style: TextStyle(fontSize: 20),
             ),
-            GetBuilder<GetstorageController>(
-                init: GetstorageController(),
+            GetBuilder<GetStorageController>(
+                init: GetStorageController(),
                 builder: (_) {
                   return Text(
                     'Storage by Get :${_.storage.read("email").toString()}',

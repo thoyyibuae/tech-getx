@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-class GetstorageController extends GetxController {
+class GetStorageController extends GetxController {
   //TODO: Implement GetstorageController
 
   final count = 0.obs;
