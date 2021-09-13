@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:get_cli_tech/app/modules/getstorage/controllers/getstorage_controller.dart';
+import 'package:get_cli_tech/app/modules/get_storage/controllers/getstorage_controller.dart';
 
 class StorageView extends GetView {
   @override

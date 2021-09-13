@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_cli_tech/app/components/button.dart';
 import 'package:get_cli_tech/app/components/cart_button.dart';
-import 'package:get_cli_tech/app/modules/getstorage/views/getstorage_view.dart';
+import 'package:get_cli_tech/app/modules/get_storage/views/getstorage_view.dart';
 
 import '../controllers/home_controller.dart';
 
