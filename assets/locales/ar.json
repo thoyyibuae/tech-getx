@@ -1,0 +1,20 @@
+{
+
+  "message": "رسائل",
+  "sub": "الإشتراك",
+  "changelang": "تغيير اللغة",
+   "Price": "سعر",
+  "ProductName": "اسم المنتج",
+  "hello": "أهلا" ,
+    "button": {
+      "login": "تسجيل الدخول",
+      "cancel": "إلغاء",
+      "submit": "يقدم"
+    },
+    "drawer": {
+      "purchase_invoice": "فاتورة الشراء"
+    },
+    "headings": {
+      "dashboard": "لوحة القيادة"
+    }
+  }

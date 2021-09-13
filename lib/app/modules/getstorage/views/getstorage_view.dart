@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_cli_tech/app/modules/StorageDisplay/views/storage_display_view.dart';
 
 import '../controllers/getstorage_controller.dart';
 
@@ -55,7 +56,7 @@ class GetstorageView extends GetView<GetstorageController> {
                       FlatButton(
                           onPressed: () {
                             // controller.storage.write("email", _.email.text);
-                            Get.to(StorageViewPageView(),
+                            Get.to(StorageDisplayView(),
                                 arguments: "${_.email.text}");
                           },
                           child: Text("View"))

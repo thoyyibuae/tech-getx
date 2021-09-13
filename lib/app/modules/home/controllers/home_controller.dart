@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_cli_tech_gebra/app/modules/home/models/product_model.dart';
+import 'package:get_cli_tech/app/modules/home/models/product_model.dart';
 // import 'package:get_storage/get_storage.dart';
 
 class HomeController extends GetxController {

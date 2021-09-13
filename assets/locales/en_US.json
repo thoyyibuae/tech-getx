@@ -1,0 +1,24 @@
+{ 
+
+  "message": "Welcome to Proto Coders Point",
+  "sub": "Subscribe Now",
+  "changelang": "Change Language",
+   "Price": "Price",
+  "ProductName": "Product Name",
+  "hello": "Hello World" ,
+    "button": {
+      "login": "Login",
+      "cancel": "Cancel",
+      "submit": "Submit"
+    },
+    "drawer": {
+      "purchase_invoice": "Purchase Invoice"
+    },
+    "headings": {
+      "dashboard": "Dashboard"
+    }
+
+  
+     
+    }
+  

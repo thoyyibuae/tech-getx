@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_cli_tech/app/modules/getstorage/views/getstorage_view.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -152,7 +153,7 @@ class HomeView extends GetView<HomeController> {
                 style: TextStyle(color: Colors.red),
               ),
               onPressed: () {
-                Get.to(() => GetStorageView());
+                Get.to(() => GetstorageView());
               }),
           RaisedButton(
               child: Text(
