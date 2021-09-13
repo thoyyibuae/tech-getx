@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_cli_tech/app/components/button.dart';
+import 'package:get_cli_tech/app/components/validate_button.dart';
 import 'package:get_cli_tech/app/modules/StorageDisplay/views/storage_display_view.dart';
 
 import '../controllers/getstorage_controller.dart';
@@ -29,18 +31,14 @@ class GetstorageView extends GetView<GetstorageController> {
                           decoration: InputDecoration(hintText: "Email"),
                         ),
                       ),
-                      RaisedButton(
-                          child: Text(
-                            "Validate",
-                            style: TextStyle(color: Colors.red),
-                          ),
-                          onPressed: () {
+                      ValidateButton(
+                          text: "Validate",
+                          onTap: () {
                             if (GetUtils.isEmail(_.email.text)) {
                               print("validated success");
                               _.storage.write("email", _.email.text);
                               Get.defaultDialog(
                                   content: Text("Email Validated succesfully"));
-                              // Get.back();
                             } else {
                               Get.snackbar("", "",
                                   snackPosition: SnackPosition.TOP,
@@ -53,13 +51,12 @@ class GetstorageView extends GetView<GetstorageController> {
                                   )));
                             }
                           }),
-                      FlatButton(
-                          onPressed: () {
-                            // controller.storage.write("email", _.email.text);
+                      lineButton(
+                          text: "view",
+                          onTap: () {
                             Get.to(StorageDisplayView(),
                                 arguments: "${_.email.text}");
-                          },
-                          child: Text("View"))
+                          })
                     ],
                   );
                 })

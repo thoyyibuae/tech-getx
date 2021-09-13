@@ -1,55 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:get_cli_tech/app/components/button.dart';
+import 'package:get_cli_tech/app/components/cartButton.dart';
 import 'package:get_cli_tech/app/modules/getstorage/views/getstorage_view.dart';
 
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-//update lanaguage
-  buildLanguageDialog(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (builder) {
-          return AlertDialog(
-            title: Text('Choose Your Language'),
-            content: Container(
-              width: double.maxFinite,
-              child: ListView.separated(
-                  shrinkWrap: true,
-                  itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: GestureDetector(
-                        child: Text(controller.locale[index]['name']),
-                        onTap: () {
-                          print(controller.locale[index]['name']);
-                          var locale = controller.locale[index]['locale'];
-                          if (controller.locale[index]['name'] == "ENGLISH") {
-                            Get.updateLocale(locale);
-                          }
-                          if (controller.locale[index]['name'] == "عرب") {
-                            Get.updateLocale(locale);
-                          }
-                          if (controller.locale[index]['name'] == "हिंदी") {
-                            Get.updateLocale(locale);
-                          }
-                          Get.back();
-                        },
-                      ),
-                    );
-                  },
-                  separatorBuilder: (context, index) {
-                    return Divider(
-                      color: Colors.blue,
-                    );
-                  },
-                  itemCount: controller.locale.length),
-            ),
-          );
-        });
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -91,13 +49,20 @@ class HomeView extends GetView<HomeController> {
                 'sub'.tr,
                 style: TextStyle(fontSize: 20),
               ),
-              ElevatedButton(
-                  onPressed: () {
-                    buildLanguageDialog(context);
-                  },
-                  child: Text('changelang'.tr)),
             ],
           ),
+          GetBuilder<HomeController>(builder: (_) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      _.buildLanguageDialog(context);
+                    },
+                    child: Text('changelang'.tr))
+              ],
+            );
+          }),
           Expanded(
             child: GetX<HomeController>(builder: (controller) {
               return ListView.builder(
@@ -124,14 +89,10 @@ class HomeView extends GetView<HomeController> {
                                 )
                               ],
                             ),
-                            RaisedButton(
-                                child: Text("Add to cart"),
-                                color: Colors.blue,
-                                textColor: Colors.white,
-                                onPressed: () {
-                                  controller
-                                      .addToCart(controller.products[index]);
-                                }),
+                            CartButton(
+                                text: "Add To Cart",
+                                onTap: () => controller
+                                    .addToCart(controller.products[index]))
                           ],
                         ),
                       ),
@@ -147,20 +108,14 @@ class HomeView extends GetView<HomeController> {
               })
             ],
           ),
-          RaisedButton(
-              child: Text(
-                "Get Storage Example",
-                style: TextStyle(color: Colors.red),
-              ),
-              onPressed: () {
+          lineButton(
+              text: "Get Storage Example ",
+              onTap: () {
                 Get.to(() => GetstorageView());
               }),
-          RaisedButton(
-              child: Text(
-                "Bottom Sheet",
-                style: TextStyle(color: Colors.red),
-              ),
-              onPressed: () {
+          lineButton(
+              text: "Bottom Sheet",
+              onTap: () {
                 Get.bottomSheet(Container(
                   height: 100,
                   color: Colors.white,
@@ -170,12 +125,16 @@ class HomeView extends GetView<HomeController> {
                     children: [
                       Icon(
                         Icons.home,
+                        color: controller.isDark ? Colors.red : Colors.black,
                       ),
-                      Icon(Icons.shopping_bag)
+                      Icon(
+                        Icons.shopping_bag,
+                        color: controller.isDark ? Colors.red : Colors.black,
+                      )
                     ],
                   ),
                 ));
-              })
+              }),
         ],
       ),
     ));

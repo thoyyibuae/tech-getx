@@ -19,11 +19,56 @@ class HomeController extends GetxController {
     cartItems.add(product);
   }
 
+//languages list
   final List locale = [
     {'name': 'ENGLISH', 'locale': Locale('en', 'US')},
     {'name': 'عرب', 'locale': Locale('ar', 'IN')},
     {'name': 'हिंदी', 'locale': Locale('hindi', 'IN')},
   ];
+
+//update lanaguage
+  buildLanguageDialog(BuildContext context) {
+    Get.dialog(
+      AlertDialog(
+        title: Text('Choose Your Language'),
+        content: Container(
+          width: double.maxFinite,
+          child: ListView.separated(
+              shrinkWrap: true,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: GestureDetector(
+                    child: Text(locale[index]['name']),
+                    onTap: () {
+                      var local = locale[index]['locale'];
+                      if (locale[index]['name'].toString() == "ENGLISH") {
+                        Get.updateLocale(local);
+                      }
+                      if (locale[index]['name'].toString() == "عرب") {
+                        Get.updateLocale(local);
+                      }
+                      if (locale[index]['name'].toString() == "हिंदी") {
+                        Get.updateLocale(local);
+                      }
+                      Get.back();
+                    },
+                  ),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return Divider(
+                  color: Colors.blue,
+                );
+              },
+              itemCount: locale.length),
+        ),
+      ),
+      barrierDismissible: false,
+    );
+
+    update();
+  }
 
   final count = 0.obs;
   @override
