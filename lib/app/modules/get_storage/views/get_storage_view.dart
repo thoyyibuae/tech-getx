@@ -4,8 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_cli_tech/app/components/button.dart';
 import 'package:get_cli_tech/app/components/validate_button.dart';
 import 'package:get_cli_tech/app/modules/get_storage/views/storage_view.dart';
-
-import '../controllers/getstorage_controller.dart';
+import 'package:get_cli_tech/app/modules/getstorage/controllers/getstorage_controller.dart';
 
 class GetStorageView extends GetView<GetStorageController> {
   @override

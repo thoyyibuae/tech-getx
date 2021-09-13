@@ -70,7 +70,6 @@ class HomeController extends GetxController {
     update();
   }
 
-  final count = 0.obs;
   @override
   void onInit() {
     // TODO: implement onInit
@@ -82,11 +81,6 @@ class HomeController extends GetxController {
     // fetchProducts();
 
     super.onInit();
-  }
-
-  fetchProducts() async {
-    await Future.delayed(Duration(seconds: 1));
-    var serverRes = [];
   }
 
 //change theme
@@ -108,5 +102,4 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

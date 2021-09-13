@@ -5,7 +5,6 @@ import 'package:get_storage/get_storage.dart';
 class GetStorageController extends GetxController {
   //TODO: Implement GetstorageController
 
-  final count = 0.obs;
   @override
   final storage = GetStorage();
   var email = TextEditingController();
@@ -22,5 +21,4 @@ class GetStorageController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
 }

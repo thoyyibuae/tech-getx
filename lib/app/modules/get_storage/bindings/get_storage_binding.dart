@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-import '../controllers/getstorage_controller.dart';
+import '../controllers/get_storage_controller.dart';
 
 class GetStorageBinding extends Bindings {
   @override

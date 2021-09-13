@@ -8,6 +8,7 @@ abstract class Routes {
   static const GETSTORAGE = _Paths.GETSTORAGE;
   static const STOAGE_DISPLAY = _Paths.STOAGE_DISPLAY;
   static const STORAGE_DISPLAY = _Paths.STORAGE_DISPLAY;
+  static const GET_STORAGE = _Paths.GET_STORAGE;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const GETSTORAGE = '/getstorage';
   static const STOAGE_DISPLAY = '/stoage-display';
   static const STORAGE_DISPLAY = '/storage-display';
+  static const GET_STORAGE = '/get-storage';
 }
