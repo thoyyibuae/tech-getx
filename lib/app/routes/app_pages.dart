@@ -5,7 +5,7 @@ import 'package:get_cli_tech/app/modules/get_storage/views/getstorage_view.dart'
 
 import 'package:get_cli_tech/app/modules/home/bindings/home_binding.dart';
 import 'package:get_cli_tech/app/modules/home/views/home_view.dart';
-import 'package:get_cli_tech/app/modules/storage_display/storage_view.dart';
+import 'package:get_cli_tech/app/modules/get_storage/views/storage_view.dart';
 
 part 'app_routes.dart';
 
